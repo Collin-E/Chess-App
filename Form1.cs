@@ -18,7 +18,7 @@ namespace ChessCS
         List<List<Button>> buttonList;
         chessPiece clicked = new chessPiece("Temp", "NoTeam", -1, -1);
         chessPiece newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
-        int counter = 0;
+        chessPiece promotedPiece = new chessPiece("Temp", "NoTeam", -1, -1);
         int saveI = -1;
         int saveNewClickedI = -1;
         public Form1()
@@ -38,7 +38,14 @@ namespace ChessCS
             List<Button> buttonRow7 = new List<Button>() { b70, b71, b72, b73, b74, b75, b76, b77 };
             buttonList = new List<List<Button>>() { buttonRow0, buttonRow1, buttonRow2, buttonRow3, buttonRow4, buttonRow5, buttonRow6, buttonRow7 };
 
-
+            queenPromo.Visible = false;
+            rookPromo.Visible = false;
+            knightPromo.Visible = false;
+            bishopPromo.Visible = false;
+            queenPromo.Enabled = false;
+            rookPromo.Enabled = false;
+            knightPromo.Enabled = false;
+            bishopPromo.Enabled = false;
             resetBoardPieces();
             makeBoard();
             //textBox1.Text += (findAvailableMoves(combinedPieces[15]).Count / 2).ToString() + "\r\n";
@@ -1077,6 +1084,58 @@ namespace ChessCS
 
                 }
             }
+            checkForPromo();
+        }
+        private void checkForPromo()
+        {
+            for(int i = 0; i < combinedPieces.Count(); i++)
+            {
+                chessPiece here = combinedPieces[i];
+                if(here.name == "Pawn" && here.isAlive)
+                {
+                    if(here.team == "White")
+                    {
+                        if(here.row == 0)
+                        {
+                            promotePiece(here);
+                        }
+                    }
+                    else if(here.team == "Black")
+                    {
+                        if(here.row == 7)
+                        {
+                            promotePiece(here);
+                        }
+                    }
+                }
+            }
+        }
+        private void promotePiece(chessPiece here)
+        {
+            queenPromo.Visible = true;
+            rookPromo.Visible = true;
+            knightPromo.Visible = true;
+            bishopPromo.Visible = true;
+            queenPromo.Enabled = true;
+            rookPromo.Enabled = true;
+            knightPromo.Enabled = true;
+            bishopPromo.Enabled = true;
+            promotedPiece = here;
+        }
+
+        private void promo(object sender, EventArgs e)
+        {
+            string s = (string)(sender as Button).Tag;
+            promotedPiece.name = s;
+            makeBoard();
+            queenPromo.Visible = false;
+            rookPromo.Visible = false;
+            knightPromo.Visible = false;
+            bishopPromo.Visible = false;
+            queenPromo.Enabled = false;
+            rookPromo.Enabled = false;
+            knightPromo.Enabled = false;
+            bishopPromo.Enabled = false;
         }
     }
 }

@@ -93,6 +93,10 @@
             this.b25 = new System.Windows.Forms.Button();
             this.b24 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.queenPromo = new System.Windows.Forms.Button();
+            this.rookPromo = new System.Windows.Forms.Button();
+            this.knightPromo = new System.Windows.Forms.Button();
+            this.bishopPromo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // b64
@@ -1128,12 +1132,84 @@
             this.textBox1.Size = new System.Drawing.Size(202, 488);
             this.textBox1.TabIndex = 64;
             // 
+            // queenPromo
+            // 
+            this.queenPromo.BackColor = System.Drawing.Color.OrangeRed;
+            this.queenPromo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.queenPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.queenPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.queenPromo.ForeColor = System.Drawing.Color.Black;
+            this.queenPromo.Location = new System.Drawing.Point(119, 74);
+            this.queenPromo.Margin = new System.Windows.Forms.Padding(0);
+            this.queenPromo.Name = "queenPromo";
+            this.queenPromo.Size = new System.Drawing.Size(65, 65);
+            this.queenPromo.TabIndex = 65;
+            this.queenPromo.Tag = "Queen";
+            this.queenPromo.Text = "Queen";
+            this.queenPromo.UseVisualStyleBackColor = false;
+            this.queenPromo.Click += new System.EventHandler(this.promo);
+            // 
+            // rookPromo
+            // 
+            this.rookPromo.BackColor = System.Drawing.Color.OrangeRed;
+            this.rookPromo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.rookPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rookPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rookPromo.ForeColor = System.Drawing.Color.Black;
+            this.rookPromo.Location = new System.Drawing.Point(119, 139);
+            this.rookPromo.Margin = new System.Windows.Forms.Padding(0);
+            this.rookPromo.Name = "rookPromo";
+            this.rookPromo.Size = new System.Drawing.Size(65, 65);
+            this.rookPromo.TabIndex = 66;
+            this.rookPromo.Tag = "Rook";
+            this.rookPromo.Text = "Rook";
+            this.rookPromo.UseVisualStyleBackColor = false;
+            this.rookPromo.Click += new System.EventHandler(this.promo);
+            // 
+            // knightPromo
+            // 
+            this.knightPromo.BackColor = System.Drawing.Color.OrangeRed;
+            this.knightPromo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.knightPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.knightPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knightPromo.ForeColor = System.Drawing.Color.Black;
+            this.knightPromo.Location = new System.Drawing.Point(119, 204);
+            this.knightPromo.Margin = new System.Windows.Forms.Padding(0);
+            this.knightPromo.Name = "knightPromo";
+            this.knightPromo.Size = new System.Drawing.Size(65, 65);
+            this.knightPromo.TabIndex = 67;
+            this.knightPromo.Tag = "Knight";
+            this.knightPromo.Text = "Knight";
+            this.knightPromo.UseVisualStyleBackColor = false;
+            this.knightPromo.Click += new System.EventHandler(this.promo);
+            // 
+            // bishopPromo
+            // 
+            this.bishopPromo.BackColor = System.Drawing.Color.OrangeRed;
+            this.bishopPromo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.bishopPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bishopPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bishopPromo.ForeColor = System.Drawing.Color.Black;
+            this.bishopPromo.Location = new System.Drawing.Point(119, 269);
+            this.bishopPromo.Margin = new System.Windows.Forms.Padding(0);
+            this.bishopPromo.Name = "bishopPromo";
+            this.bishopPromo.Size = new System.Drawing.Size(65, 65);
+            this.bishopPromo.TabIndex = 68;
+            this.bishopPromo.Tag = "Bishop";
+            this.bishopPromo.Text = "Bishop";
+            this.bishopPromo.UseVisualStyleBackColor = false;
+            this.bishopPromo.Click += new System.EventHandler(this.promo);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(927, 599);
+            this.Controls.Add(this.bishopPromo);
+            this.Controls.Add(this.knightPromo);
+            this.Controls.Add(this.rookPromo);
+            this.Controls.Add(this.queenPromo);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.b17);
             this.Controls.Add(this.b12);
@@ -1274,6 +1350,10 @@
         private System.Windows.Forms.Button b25;
         private System.Windows.Forms.Button b24;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button queenPromo;
+        private System.Windows.Forms.Button rookPromo;
+        private System.Windows.Forms.Button knightPromo;
+        private System.Windows.Forms.Button bishopPromo;
     }
 }
 
