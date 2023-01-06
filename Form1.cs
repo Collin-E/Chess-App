@@ -997,7 +997,7 @@ namespace ChessCS
                 }
             }
             List<int> moves = findAvailableMoves(x);*/
-            if (buttonList[row][column].BackColor != Color.Blue)
+            if (buttonList[row][column].BackColor != Color.DodgerBlue)
             {
                 resetBoardColors();
                 textBox1.Text += row + " blue " + column + "\r\n";
@@ -1034,7 +1034,7 @@ namespace ChessCS
                 {
                     int newRow = moves[i];
                     int newColumn = moves[i + 1];
-                    buttonList[newRow][newColumn].BackColor = Color.Blue;
+                    buttonList[newRow][newColumn].BackColor = Color.DodgerBlue;
                 }
                 clicked = x;
             }
