@@ -47,6 +47,9 @@ namespace ChessCS
             rookPromo.Enabled = false;
             knightPromo.Enabled = false;
             bishopPromo.Enabled = false;
+
+            //blacksTurnLabel.
+
             resetBoardPieces();
             makeBoard();
             //textBox1.Text += (findAvailableMoves(combinedPieces[15]).Count / 2).ToString() + "\r\n";
@@ -60,6 +63,16 @@ namespace ChessCS
         }
         private void makeBoard()
         {
+            if(turn == 0)
+            {
+                blackTurnLabel.Visible = false;
+                whiteTurnLabel.Visible = true;
+            }
+            else if(turn == 1)
+            {
+                whiteTurnLabel.Visible = false;
+                blackTurnLabel.Visible = true;
+            }
             for(int i = 0; i < combinedPieces.Count(); i++)
             {
                 chessPiece here = combinedPieces[i];
@@ -1098,10 +1111,12 @@ namespace ChessCS
                     clicked = new chessPiece("Temp", "NoTeam", -1, -1);
 
                     resetBoardColors();
-                    makeBoard();
-                    buttonList[oldRow][oldColumn].Text = "";
+                    //makeBoard();
+                    //buttonList[oldRow][oldColumn].Text = "";
 
                     turn = turn == 0 ? 1 : 0;
+                    makeBoard();
+                    buttonList[oldRow][oldColumn].Text = "";
                 }
                 //turn = turn == 0 ? 1 : 0;
             }

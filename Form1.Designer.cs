@@ -97,6 +97,8 @@
             this.rookPromo = new System.Windows.Forms.Button();
             this.knightPromo = new System.Windows.Forms.Button();
             this.bishopPromo = new System.Windows.Forms.Button();
+            this.blackTurnLabel = new System.Windows.Forms.Label();
+            this.whiteTurnLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // b64
@@ -106,7 +108,7 @@
             this.b64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b64.ForeColor = System.Drawing.Color.White;
-            this.b64.Location = new System.Drawing.Point(458, 399);
+            this.b64.Location = new System.Drawing.Point(485, 439);
             this.b64.Margin = new System.Windows.Forms.Padding(0);
             this.b64.Name = "b64";
             this.b64.Size = new System.Drawing.Size(65, 65);
@@ -122,7 +124,7 @@
             this.b65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b65.ForeColor = System.Drawing.Color.White;
-            this.b65.Location = new System.Drawing.Point(523, 399);
+            this.b65.Location = new System.Drawing.Point(550, 439);
             this.b65.Margin = new System.Windows.Forms.Padding(0);
             this.b65.Name = "b65";
             this.b65.Size = new System.Drawing.Size(65, 65);
@@ -138,7 +140,7 @@
             this.b67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b67.ForeColor = System.Drawing.Color.White;
-            this.b67.Location = new System.Drawing.Point(653, 399);
+            this.b67.Location = new System.Drawing.Point(680, 439);
             this.b67.Margin = new System.Windows.Forms.Padding(0);
             this.b67.Name = "b67";
             this.b67.Size = new System.Drawing.Size(65, 65);
@@ -154,7 +156,7 @@
             this.b66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b66.ForeColor = System.Drawing.Color.White;
-            this.b66.Location = new System.Drawing.Point(588, 399);
+            this.b66.Location = new System.Drawing.Point(615, 439);
             this.b66.Margin = new System.Windows.Forms.Padding(0);
             this.b66.Name = "b66";
             this.b66.Size = new System.Drawing.Size(65, 65);
@@ -170,7 +172,7 @@
             this.b63.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b63.ForeColor = System.Drawing.Color.White;
-            this.b63.Location = new System.Drawing.Point(393, 399);
+            this.b63.Location = new System.Drawing.Point(420, 439);
             this.b63.Margin = new System.Windows.Forms.Padding(0);
             this.b63.Name = "b63";
             this.b63.Size = new System.Drawing.Size(65, 65);
@@ -186,7 +188,7 @@
             this.b62.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b62.ForeColor = System.Drawing.Color.White;
-            this.b62.Location = new System.Drawing.Point(328, 399);
+            this.b62.Location = new System.Drawing.Point(355, 439);
             this.b62.Margin = new System.Windows.Forms.Padding(0);
             this.b62.Name = "b62";
             this.b62.Size = new System.Drawing.Size(65, 65);
@@ -202,7 +204,7 @@
             this.b61.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b61.ForeColor = System.Drawing.Color.White;
-            this.b61.Location = new System.Drawing.Point(263, 399);
+            this.b61.Location = new System.Drawing.Point(290, 439);
             this.b61.Margin = new System.Windows.Forms.Padding(0);
             this.b61.Name = "b61";
             this.b61.Size = new System.Drawing.Size(65, 65);
@@ -218,7 +220,7 @@
             this.b60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b60.ForeColor = System.Drawing.Color.White;
-            this.b60.Location = new System.Drawing.Point(198, 399);
+            this.b60.Location = new System.Drawing.Point(225, 439);
             this.b60.Margin = new System.Windows.Forms.Padding(0);
             this.b60.Name = "b60";
             this.b60.Size = new System.Drawing.Size(65, 65);
@@ -234,7 +236,7 @@
             this.b72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b72.ForeColor = System.Drawing.Color.White;
-            this.b72.Location = new System.Drawing.Point(328, 464);
+            this.b72.Location = new System.Drawing.Point(355, 504);
             this.b72.Margin = new System.Windows.Forms.Padding(0);
             this.b72.Name = "b72";
             this.b72.Size = new System.Drawing.Size(65, 65);
@@ -250,7 +252,7 @@
             this.b71.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b71.ForeColor = System.Drawing.Color.White;
-            this.b71.Location = new System.Drawing.Point(263, 464);
+            this.b71.Location = new System.Drawing.Point(290, 504);
             this.b71.Margin = new System.Windows.Forms.Padding(0);
             this.b71.Name = "b71";
             this.b71.Size = new System.Drawing.Size(65, 65);
@@ -266,7 +268,7 @@
             this.b70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b70.ForeColor = System.Drawing.Color.White;
-            this.b70.Location = new System.Drawing.Point(198, 464);
+            this.b70.Location = new System.Drawing.Point(225, 504);
             this.b70.Margin = new System.Windows.Forms.Padding(0);
             this.b70.Name = "b70";
             this.b70.Size = new System.Drawing.Size(65, 65);
@@ -282,7 +284,7 @@
             this.b76.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b76.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b76.ForeColor = System.Drawing.Color.White;
-            this.b76.Location = new System.Drawing.Point(588, 464);
+            this.b76.Location = new System.Drawing.Point(615, 504);
             this.b76.Margin = new System.Windows.Forms.Padding(0);
             this.b76.Name = "b76";
             this.b76.Size = new System.Drawing.Size(65, 65);
@@ -298,7 +300,7 @@
             this.b75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b75.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b75.ForeColor = System.Drawing.Color.White;
-            this.b75.Location = new System.Drawing.Point(523, 464);
+            this.b75.Location = new System.Drawing.Point(550, 504);
             this.b75.Margin = new System.Windows.Forms.Padding(0);
             this.b75.Name = "b75";
             this.b75.Size = new System.Drawing.Size(65, 65);
@@ -314,7 +316,7 @@
             this.b74.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b74.ForeColor = System.Drawing.Color.White;
-            this.b74.Location = new System.Drawing.Point(458, 464);
+            this.b74.Location = new System.Drawing.Point(485, 504);
             this.b74.Margin = new System.Windows.Forms.Padding(0);
             this.b74.Name = "b74";
             this.b74.Size = new System.Drawing.Size(65, 65);
@@ -330,7 +332,7 @@
             this.b73.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b73.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b73.ForeColor = System.Drawing.Color.White;
-            this.b73.Location = new System.Drawing.Point(393, 464);
+            this.b73.Location = new System.Drawing.Point(420, 504);
             this.b73.Margin = new System.Windows.Forms.Padding(0);
             this.b73.Name = "b73";
             this.b73.Size = new System.Drawing.Size(65, 65);
@@ -346,7 +348,7 @@
             this.b77.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b77.ForeColor = System.Drawing.Color.White;
-            this.b77.Location = new System.Drawing.Point(653, 464);
+            this.b77.Location = new System.Drawing.Point(680, 504);
             this.b77.Margin = new System.Windows.Forms.Padding(0);
             this.b77.Name = "b77";
             this.b77.Size = new System.Drawing.Size(65, 65);
@@ -362,7 +364,7 @@
             this.b57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b57.ForeColor = System.Drawing.Color.White;
-            this.b57.Location = new System.Drawing.Point(653, 334);
+            this.b57.Location = new System.Drawing.Point(680, 374);
             this.b57.Margin = new System.Windows.Forms.Padding(0);
             this.b57.Name = "b57";
             this.b57.Size = new System.Drawing.Size(65, 65);
@@ -378,7 +380,7 @@
             this.b52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b52.ForeColor = System.Drawing.Color.White;
-            this.b52.Location = new System.Drawing.Point(328, 334);
+            this.b52.Location = new System.Drawing.Point(355, 374);
             this.b52.Margin = new System.Windows.Forms.Padding(0);
             this.b52.Name = "b52";
             this.b52.Size = new System.Drawing.Size(65, 65);
@@ -394,7 +396,7 @@
             this.b51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b51.ForeColor = System.Drawing.Color.White;
-            this.b51.Location = new System.Drawing.Point(263, 334);
+            this.b51.Location = new System.Drawing.Point(290, 374);
             this.b51.Margin = new System.Windows.Forms.Padding(0);
             this.b51.Name = "b51";
             this.b51.Size = new System.Drawing.Size(65, 65);
@@ -410,7 +412,7 @@
             this.b50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b50.ForeColor = System.Drawing.Color.White;
-            this.b50.Location = new System.Drawing.Point(198, 334);
+            this.b50.Location = new System.Drawing.Point(225, 374);
             this.b50.Margin = new System.Windows.Forms.Padding(0);
             this.b50.Name = "b50";
             this.b50.Size = new System.Drawing.Size(65, 65);
@@ -426,7 +428,7 @@
             this.b56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b56.ForeColor = System.Drawing.Color.White;
-            this.b56.Location = new System.Drawing.Point(588, 334);
+            this.b56.Location = new System.Drawing.Point(615, 374);
             this.b56.Margin = new System.Windows.Forms.Padding(0);
             this.b56.Name = "b56";
             this.b56.Size = new System.Drawing.Size(65, 65);
@@ -442,7 +444,7 @@
             this.b55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b55.ForeColor = System.Drawing.Color.White;
-            this.b55.Location = new System.Drawing.Point(523, 334);
+            this.b55.Location = new System.Drawing.Point(550, 374);
             this.b55.Margin = new System.Windows.Forms.Padding(0);
             this.b55.Name = "b55";
             this.b55.Size = new System.Drawing.Size(65, 65);
@@ -458,7 +460,7 @@
             this.b54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b54.ForeColor = System.Drawing.Color.White;
-            this.b54.Location = new System.Drawing.Point(458, 334);
+            this.b54.Location = new System.Drawing.Point(485, 374);
             this.b54.Margin = new System.Windows.Forms.Padding(0);
             this.b54.Name = "b54";
             this.b54.Size = new System.Drawing.Size(65, 65);
@@ -474,7 +476,7 @@
             this.b53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b53.ForeColor = System.Drawing.Color.White;
-            this.b53.Location = new System.Drawing.Point(393, 334);
+            this.b53.Location = new System.Drawing.Point(420, 374);
             this.b53.Margin = new System.Windows.Forms.Padding(0);
             this.b53.Name = "b53";
             this.b53.Size = new System.Drawing.Size(65, 65);
@@ -490,7 +492,7 @@
             this.b43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b43.ForeColor = System.Drawing.Color.White;
-            this.b43.Location = new System.Drawing.Point(393, 269);
+            this.b43.Location = new System.Drawing.Point(420, 309);
             this.b43.Margin = new System.Windows.Forms.Padding(0);
             this.b43.Name = "b43";
             this.b43.Size = new System.Drawing.Size(65, 65);
@@ -506,7 +508,7 @@
             this.b42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b42.ForeColor = System.Drawing.Color.White;
-            this.b42.Location = new System.Drawing.Point(328, 269);
+            this.b42.Location = new System.Drawing.Point(355, 309);
             this.b42.Margin = new System.Windows.Forms.Padding(0);
             this.b42.Name = "b42";
             this.b42.Size = new System.Drawing.Size(65, 65);
@@ -522,7 +524,7 @@
             this.b41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b41.ForeColor = System.Drawing.Color.White;
-            this.b41.Location = new System.Drawing.Point(263, 269);
+            this.b41.Location = new System.Drawing.Point(290, 309);
             this.b41.Margin = new System.Windows.Forms.Padding(0);
             this.b41.Name = "b41";
             this.b41.Size = new System.Drawing.Size(65, 65);
@@ -538,7 +540,7 @@
             this.b40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b40.ForeColor = System.Drawing.Color.White;
-            this.b40.Location = new System.Drawing.Point(198, 269);
+            this.b40.Location = new System.Drawing.Point(225, 309);
             this.b40.Margin = new System.Windows.Forms.Padding(0);
             this.b40.Name = "b40";
             this.b40.Size = new System.Drawing.Size(65, 65);
@@ -554,7 +556,7 @@
             this.b47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b47.ForeColor = System.Drawing.Color.White;
-            this.b47.Location = new System.Drawing.Point(653, 269);
+            this.b47.Location = new System.Drawing.Point(680, 309);
             this.b47.Margin = new System.Windows.Forms.Padding(0);
             this.b47.Name = "b47";
             this.b47.Size = new System.Drawing.Size(65, 65);
@@ -570,7 +572,7 @@
             this.b46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b46.ForeColor = System.Drawing.Color.White;
-            this.b46.Location = new System.Drawing.Point(588, 269);
+            this.b46.Location = new System.Drawing.Point(615, 309);
             this.b46.Margin = new System.Windows.Forms.Padding(0);
             this.b46.Name = "b46";
             this.b46.Size = new System.Drawing.Size(65, 65);
@@ -586,7 +588,7 @@
             this.b45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b45.ForeColor = System.Drawing.Color.White;
-            this.b45.Location = new System.Drawing.Point(523, 269);
+            this.b45.Location = new System.Drawing.Point(550, 309);
             this.b45.Margin = new System.Windows.Forms.Padding(0);
             this.b45.Name = "b45";
             this.b45.Size = new System.Drawing.Size(65, 65);
@@ -602,7 +604,7 @@
             this.b44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b44.ForeColor = System.Drawing.Color.White;
-            this.b44.Location = new System.Drawing.Point(458, 269);
+            this.b44.Location = new System.Drawing.Point(485, 309);
             this.b44.Margin = new System.Windows.Forms.Padding(0);
             this.b44.Name = "b44";
             this.b44.Size = new System.Drawing.Size(65, 65);
@@ -618,7 +620,7 @@
             this.b17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b17.ForeColor = System.Drawing.Color.White;
-            this.b17.Location = new System.Drawing.Point(653, 74);
+            this.b17.Location = new System.Drawing.Point(680, 114);
             this.b17.Margin = new System.Windows.Forms.Padding(0);
             this.b17.Name = "b17";
             this.b17.Size = new System.Drawing.Size(65, 65);
@@ -634,7 +636,7 @@
             this.b12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b12.ForeColor = System.Drawing.Color.White;
-            this.b12.Location = new System.Drawing.Point(328, 74);
+            this.b12.Location = new System.Drawing.Point(355, 114);
             this.b12.Margin = new System.Windows.Forms.Padding(0);
             this.b12.Name = "b12";
             this.b12.Size = new System.Drawing.Size(65, 65);
@@ -650,7 +652,7 @@
             this.b11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b11.ForeColor = System.Drawing.Color.White;
-            this.b11.Location = new System.Drawing.Point(263, 74);
+            this.b11.Location = new System.Drawing.Point(290, 114);
             this.b11.Margin = new System.Windows.Forms.Padding(0);
             this.b11.Name = "b11";
             this.b11.Size = new System.Drawing.Size(65, 65);
@@ -666,7 +668,7 @@
             this.b10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b10.ForeColor = System.Drawing.Color.White;
-            this.b10.Location = new System.Drawing.Point(198, 74);
+            this.b10.Location = new System.Drawing.Point(225, 114);
             this.b10.Margin = new System.Windows.Forms.Padding(0);
             this.b10.Name = "b10";
             this.b10.Size = new System.Drawing.Size(65, 65);
@@ -682,7 +684,7 @@
             this.b16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b16.ForeColor = System.Drawing.Color.White;
-            this.b16.Location = new System.Drawing.Point(588, 74);
+            this.b16.Location = new System.Drawing.Point(615, 114);
             this.b16.Margin = new System.Windows.Forms.Padding(0);
             this.b16.Name = "b16";
             this.b16.Size = new System.Drawing.Size(65, 65);
@@ -698,7 +700,7 @@
             this.b15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b15.ForeColor = System.Drawing.Color.White;
-            this.b15.Location = new System.Drawing.Point(523, 74);
+            this.b15.Location = new System.Drawing.Point(550, 114);
             this.b15.Margin = new System.Windows.Forms.Padding(0);
             this.b15.Name = "b15";
             this.b15.Size = new System.Drawing.Size(65, 65);
@@ -714,7 +716,7 @@
             this.b14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b14.ForeColor = System.Drawing.Color.White;
-            this.b14.Location = new System.Drawing.Point(458, 74);
+            this.b14.Location = new System.Drawing.Point(485, 114);
             this.b14.Margin = new System.Windows.Forms.Padding(0);
             this.b14.Name = "b14";
             this.b14.Size = new System.Drawing.Size(65, 65);
@@ -730,7 +732,7 @@
             this.b13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b13.ForeColor = System.Drawing.Color.White;
-            this.b13.Location = new System.Drawing.Point(393, 74);
+            this.b13.Location = new System.Drawing.Point(420, 114);
             this.b13.Margin = new System.Windows.Forms.Padding(0);
             this.b13.Name = "b13";
             this.b13.Size = new System.Drawing.Size(65, 65);
@@ -746,7 +748,7 @@
             this.b03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b03.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b03.ForeColor = System.Drawing.Color.White;
-            this.b03.Location = new System.Drawing.Point(393, 9);
+            this.b03.Location = new System.Drawing.Point(420, 49);
             this.b03.Margin = new System.Windows.Forms.Padding(0);
             this.b03.Name = "b03";
             this.b03.Size = new System.Drawing.Size(65, 65);
@@ -762,7 +764,7 @@
             this.b02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b02.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b02.ForeColor = System.Drawing.Color.White;
-            this.b02.Location = new System.Drawing.Point(328, 9);
+            this.b02.Location = new System.Drawing.Point(355, 49);
             this.b02.Margin = new System.Windows.Forms.Padding(0);
             this.b02.Name = "b02";
             this.b02.Size = new System.Drawing.Size(65, 65);
@@ -778,7 +780,7 @@
             this.b01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b01.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b01.ForeColor = System.Drawing.Color.White;
-            this.b01.Location = new System.Drawing.Point(263, 9);
+            this.b01.Location = new System.Drawing.Point(290, 49);
             this.b01.Margin = new System.Windows.Forms.Padding(0);
             this.b01.Name = "b01";
             this.b01.Size = new System.Drawing.Size(65, 65);
@@ -794,7 +796,7 @@
             this.b00.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b00.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b00.ForeColor = System.Drawing.Color.White;
-            this.b00.Location = new System.Drawing.Point(198, 9);
+            this.b00.Location = new System.Drawing.Point(225, 49);
             this.b00.Margin = new System.Windows.Forms.Padding(0);
             this.b00.Name = "b00";
             this.b00.Size = new System.Drawing.Size(65, 65);
@@ -810,7 +812,7 @@
             this.b07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b07.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b07.ForeColor = System.Drawing.Color.White;
-            this.b07.Location = new System.Drawing.Point(653, 9);
+            this.b07.Location = new System.Drawing.Point(680, 49);
             this.b07.Margin = new System.Windows.Forms.Padding(0);
             this.b07.Name = "b07";
             this.b07.Size = new System.Drawing.Size(65, 65);
@@ -826,7 +828,7 @@
             this.b06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b06.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b06.ForeColor = System.Drawing.Color.White;
-            this.b06.Location = new System.Drawing.Point(588, 9);
+            this.b06.Location = new System.Drawing.Point(615, 49);
             this.b06.Margin = new System.Windows.Forms.Padding(0);
             this.b06.Name = "b06";
             this.b06.Size = new System.Drawing.Size(65, 65);
@@ -842,7 +844,7 @@
             this.b05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b05.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b05.ForeColor = System.Drawing.Color.White;
-            this.b05.Location = new System.Drawing.Point(523, 9);
+            this.b05.Location = new System.Drawing.Point(550, 49);
             this.b05.Margin = new System.Windows.Forms.Padding(0);
             this.b05.Name = "b05";
             this.b05.Size = new System.Drawing.Size(65, 65);
@@ -858,7 +860,7 @@
             this.b04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b04.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b04.ForeColor = System.Drawing.Color.White;
-            this.b04.Location = new System.Drawing.Point(458, 9);
+            this.b04.Location = new System.Drawing.Point(485, 49);
             this.b04.Margin = new System.Windows.Forms.Padding(0);
             this.b04.Name = "b04";
             this.b04.Size = new System.Drawing.Size(65, 65);
@@ -874,7 +876,7 @@
             this.b37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b37.ForeColor = System.Drawing.Color.White;
-            this.b37.Location = new System.Drawing.Point(653, 204);
+            this.b37.Location = new System.Drawing.Point(680, 244);
             this.b37.Margin = new System.Windows.Forms.Padding(0);
             this.b37.Name = "b37";
             this.b37.Size = new System.Drawing.Size(65, 65);
@@ -890,7 +892,7 @@
             this.b32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b32.ForeColor = System.Drawing.Color.White;
-            this.b32.Location = new System.Drawing.Point(328, 204);
+            this.b32.Location = new System.Drawing.Point(355, 244);
             this.b32.Margin = new System.Windows.Forms.Padding(0);
             this.b32.Name = "b32";
             this.b32.Size = new System.Drawing.Size(65, 65);
@@ -906,7 +908,7 @@
             this.b31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b31.ForeColor = System.Drawing.Color.White;
-            this.b31.Location = new System.Drawing.Point(263, 204);
+            this.b31.Location = new System.Drawing.Point(290, 244);
             this.b31.Margin = new System.Windows.Forms.Padding(0);
             this.b31.Name = "b31";
             this.b31.Size = new System.Drawing.Size(65, 65);
@@ -922,7 +924,7 @@
             this.b30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b30.ForeColor = System.Drawing.Color.White;
-            this.b30.Location = new System.Drawing.Point(198, 204);
+            this.b30.Location = new System.Drawing.Point(225, 244);
             this.b30.Margin = new System.Windows.Forms.Padding(0);
             this.b30.Name = "b30";
             this.b30.Size = new System.Drawing.Size(65, 65);
@@ -938,7 +940,7 @@
             this.b36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b36.ForeColor = System.Drawing.Color.White;
-            this.b36.Location = new System.Drawing.Point(588, 204);
+            this.b36.Location = new System.Drawing.Point(615, 244);
             this.b36.Margin = new System.Windows.Forms.Padding(0);
             this.b36.Name = "b36";
             this.b36.Size = new System.Drawing.Size(65, 65);
@@ -954,7 +956,7 @@
             this.b35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b35.ForeColor = System.Drawing.Color.White;
-            this.b35.Location = new System.Drawing.Point(523, 204);
+            this.b35.Location = new System.Drawing.Point(550, 244);
             this.b35.Margin = new System.Windows.Forms.Padding(0);
             this.b35.Name = "b35";
             this.b35.Size = new System.Drawing.Size(65, 65);
@@ -970,7 +972,7 @@
             this.b34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b34.ForeColor = System.Drawing.Color.White;
-            this.b34.Location = new System.Drawing.Point(458, 204);
+            this.b34.Location = new System.Drawing.Point(485, 244);
             this.b34.Margin = new System.Windows.Forms.Padding(0);
             this.b34.Name = "b34";
             this.b34.Size = new System.Drawing.Size(65, 65);
@@ -986,7 +988,7 @@
             this.b33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b33.ForeColor = System.Drawing.Color.White;
-            this.b33.Location = new System.Drawing.Point(393, 204);
+            this.b33.Location = new System.Drawing.Point(420, 244);
             this.b33.Margin = new System.Windows.Forms.Padding(0);
             this.b33.Name = "b33";
             this.b33.Size = new System.Drawing.Size(65, 65);
@@ -1002,7 +1004,7 @@
             this.b23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b23.ForeColor = System.Drawing.Color.White;
-            this.b23.Location = new System.Drawing.Point(393, 139);
+            this.b23.Location = new System.Drawing.Point(420, 179);
             this.b23.Margin = new System.Windows.Forms.Padding(0);
             this.b23.Name = "b23";
             this.b23.Size = new System.Drawing.Size(65, 65);
@@ -1018,7 +1020,7 @@
             this.b22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b22.ForeColor = System.Drawing.Color.White;
-            this.b22.Location = new System.Drawing.Point(328, 139);
+            this.b22.Location = new System.Drawing.Point(355, 179);
             this.b22.Margin = new System.Windows.Forms.Padding(0);
             this.b22.Name = "b22";
             this.b22.Size = new System.Drawing.Size(65, 65);
@@ -1034,7 +1036,7 @@
             this.b21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b21.ForeColor = System.Drawing.Color.White;
-            this.b21.Location = new System.Drawing.Point(263, 139);
+            this.b21.Location = new System.Drawing.Point(290, 179);
             this.b21.Margin = new System.Windows.Forms.Padding(0);
             this.b21.Name = "b21";
             this.b21.Size = new System.Drawing.Size(65, 65);
@@ -1050,7 +1052,7 @@
             this.b20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b20.ForeColor = System.Drawing.Color.White;
-            this.b20.Location = new System.Drawing.Point(198, 139);
+            this.b20.Location = new System.Drawing.Point(225, 179);
             this.b20.Margin = new System.Windows.Forms.Padding(0);
             this.b20.Name = "b20";
             this.b20.Size = new System.Drawing.Size(65, 65);
@@ -1066,7 +1068,7 @@
             this.b27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b27.ForeColor = System.Drawing.Color.White;
-            this.b27.Location = new System.Drawing.Point(653, 139);
+            this.b27.Location = new System.Drawing.Point(680, 179);
             this.b27.Margin = new System.Windows.Forms.Padding(0);
             this.b27.Name = "b27";
             this.b27.Size = new System.Drawing.Size(65, 65);
@@ -1082,7 +1084,7 @@
             this.b26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b26.ForeColor = System.Drawing.Color.White;
-            this.b26.Location = new System.Drawing.Point(588, 139);
+            this.b26.Location = new System.Drawing.Point(615, 179);
             this.b26.Margin = new System.Windows.Forms.Padding(0);
             this.b26.Name = "b26";
             this.b26.Size = new System.Drawing.Size(65, 65);
@@ -1098,7 +1100,7 @@
             this.b25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b25.ForeColor = System.Drawing.Color.White;
-            this.b25.Location = new System.Drawing.Point(523, 139);
+            this.b25.Location = new System.Drawing.Point(550, 179);
             this.b25.Margin = new System.Windows.Forms.Padding(0);
             this.b25.Name = "b25";
             this.b25.Size = new System.Drawing.Size(65, 65);
@@ -1114,7 +1116,7 @@
             this.b24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b24.ForeColor = System.Drawing.Color.White;
-            this.b24.Location = new System.Drawing.Point(458, 139);
+            this.b24.Location = new System.Drawing.Point(485, 179);
             this.b24.Margin = new System.Windows.Forms.Padding(0);
             this.b24.Name = "b24";
             this.b24.Size = new System.Drawing.Size(65, 65);
@@ -1125,11 +1127,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(861, 33);
+            this.textBox1.Location = new System.Drawing.Point(748, 49);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(202, 488);
+            this.textBox1.Size = new System.Drawing.Size(210, 520);
             this.textBox1.TabIndex = 64;
             // 
             // queenPromo
@@ -1139,7 +1141,7 @@
             this.queenPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.queenPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.queenPromo.ForeColor = System.Drawing.Color.Black;
-            this.queenPromo.Location = new System.Drawing.Point(124, 139);
+            this.queenPromo.Location = new System.Drawing.Point(150, 179);
             this.queenPromo.Margin = new System.Windows.Forms.Padding(0);
             this.queenPromo.Name = "queenPromo";
             this.queenPromo.Size = new System.Drawing.Size(65, 65);
@@ -1156,7 +1158,7 @@
             this.rookPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rookPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rookPromo.ForeColor = System.Drawing.Color.Black;
-            this.rookPromo.Location = new System.Drawing.Point(124, 204);
+            this.rookPromo.Location = new System.Drawing.Point(150, 244);
             this.rookPromo.Margin = new System.Windows.Forms.Padding(0);
             this.rookPromo.Name = "rookPromo";
             this.rookPromo.Size = new System.Drawing.Size(65, 65);
@@ -1173,7 +1175,7 @@
             this.knightPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.knightPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knightPromo.ForeColor = System.Drawing.Color.Black;
-            this.knightPromo.Location = new System.Drawing.Point(124, 269);
+            this.knightPromo.Location = new System.Drawing.Point(150, 309);
             this.knightPromo.Margin = new System.Windows.Forms.Padding(0);
             this.knightPromo.Name = "knightPromo";
             this.knightPromo.Size = new System.Drawing.Size(65, 65);
@@ -1190,7 +1192,7 @@
             this.bishopPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bishopPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bishopPromo.ForeColor = System.Drawing.Color.Black;
-            this.bishopPromo.Location = new System.Drawing.Point(124, 334);
+            this.bishopPromo.Location = new System.Drawing.Point(150, 374);
             this.bishopPromo.Margin = new System.Windows.Forms.Padding(0);
             this.bishopPromo.Name = "bishopPromo";
             this.bishopPromo.Size = new System.Drawing.Size(65, 65);
@@ -1200,12 +1202,35 @@
             this.bishopPromo.UseVisualStyleBackColor = false;
             this.bishopPromo.Click += new System.EventHandler(this.promo);
             // 
+            // blackTurnLabel
+            // 
+            this.blackTurnLabel.AutoSize = true;
+            this.blackTurnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blackTurnLabel.Location = new System.Drawing.Point(415, 24);
+            this.blackTurnLabel.Name = "blackTurnLabel";
+            this.blackTurnLabel.Size = new System.Drawing.Size(135, 25);
+            this.blackTurnLabel.TabIndex = 69;
+            this.blackTurnLabel.Text = "Black\'s turn";
+            this.blackTurnLabel.Visible = false;
+            // 
+            // whiteTurnLabel
+            // 
+            this.whiteTurnLabel.AutoSize = true;
+            this.whiteTurnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.whiteTurnLabel.Location = new System.Drawing.Point(415, 569);
+            this.whiteTurnLabel.Name = "whiteTurnLabel";
+            this.whiteTurnLabel.Size = new System.Drawing.Size(137, 25);
+            this.whiteTurnLabel.TabIndex = 70;
+            this.whiteTurnLabel.Text = "White\'s turn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1093, 599);
+            this.ClientSize = new System.Drawing.Size(1093, 625);
+            this.Controls.Add(this.whiteTurnLabel);
+            this.Controls.Add(this.blackTurnLabel);
             this.Controls.Add(this.bishopPromo);
             this.Controls.Add(this.knightPromo);
             this.Controls.Add(this.rookPromo);
@@ -1354,6 +1379,8 @@
         private System.Windows.Forms.Button rookPromo;
         private System.Windows.Forms.Button knightPromo;
         private System.Windows.Forms.Button bishopPromo;
+        private System.Windows.Forms.Label blackTurnLabel;
+        private System.Windows.Forms.Label whiteTurnLabel;
     }
 }
 
