@@ -1125,7 +1125,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(721, 12);
+            this.textBox1.Location = new System.Drawing.Point(861, 33);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1139,7 +1139,7 @@
             this.queenPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.queenPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.queenPromo.ForeColor = System.Drawing.Color.Black;
-            this.queenPromo.Location = new System.Drawing.Point(119, 74);
+            this.queenPromo.Location = new System.Drawing.Point(124, 139);
             this.queenPromo.Margin = new System.Windows.Forms.Padding(0);
             this.queenPromo.Name = "queenPromo";
             this.queenPromo.Size = new System.Drawing.Size(65, 65);
@@ -1156,7 +1156,7 @@
             this.rookPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rookPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rookPromo.ForeColor = System.Drawing.Color.Black;
-            this.rookPromo.Location = new System.Drawing.Point(119, 139);
+            this.rookPromo.Location = new System.Drawing.Point(124, 204);
             this.rookPromo.Margin = new System.Windows.Forms.Padding(0);
             this.rookPromo.Name = "rookPromo";
             this.rookPromo.Size = new System.Drawing.Size(65, 65);
@@ -1173,7 +1173,7 @@
             this.knightPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.knightPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.knightPromo.ForeColor = System.Drawing.Color.Black;
-            this.knightPromo.Location = new System.Drawing.Point(119, 204);
+            this.knightPromo.Location = new System.Drawing.Point(124, 269);
             this.knightPromo.Margin = new System.Windows.Forms.Padding(0);
             this.knightPromo.Name = "knightPromo";
             this.knightPromo.Size = new System.Drawing.Size(65, 65);
@@ -1190,7 +1190,7 @@
             this.bishopPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bishopPromo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bishopPromo.ForeColor = System.Drawing.Color.Black;
-            this.bishopPromo.Location = new System.Drawing.Point(119, 269);
+            this.bishopPromo.Location = new System.Drawing.Point(124, 334);
             this.bishopPromo.Margin = new System.Windows.Forms.Padding(0);
             this.bishopPromo.Name = "bishopPromo";
             this.bishopPromo.Size = new System.Drawing.Size(65, 65);
@@ -1205,7 +1205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(927, 599);
+            this.ClientSize = new System.Drawing.Size(1093, 599);
             this.Controls.Add(this.bishopPromo);
             this.Controls.Add(this.knightPromo);
             this.Controls.Add(this.rookPromo);

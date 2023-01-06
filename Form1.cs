@@ -19,6 +19,7 @@ namespace ChessCS
         chessPiece clicked = new chessPiece("Temp", "NoTeam", -1, -1);
         chessPiece newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
         chessPiece promotedPiece = new chessPiece("Temp", "NoTeam", -1, -1);
+        int turn = 0; // 0 is white 1 is black
         int saveI = -1;
         int saveNewClickedI = -1;
         public Form1()
@@ -1007,6 +1008,14 @@ namespace ChessCS
                     textBox1.Text += " Is Dead " + "\r\n";
                     return;
                 }*/
+                if(x.team == "White" && turn != 0)
+                {
+                    return;
+                }
+                if(x.team == "Black" && turn != 1)
+                {
+                    return;
+                }
                 List<int> moves = findAvailableMoves(x);
                 for (int i = 0; i < moves.Count(); i += 2)
                 {
@@ -1051,6 +1060,16 @@ namespace ChessCS
                             savedColumn2 = column2;*/
                         }
                     }
+
+                    //if(clicked.team == "White" && turn != 0) {
+                    //    textBox1.Text += "It is not your turn: " + turn + "\r\n";
+                    //    return; 
+                    //}
+                    //else if(clicked.team == "Black" && turn != 1) {
+                   //     textBox1.Text += "It is not your turn: " + turn + "\r\n";
+                   //     return;  
+                   // }
+
                     if(newClicked.team != "NoTeam" && saveNewClickedI != -1)
                     {
                         textBox1.Text += " Killed " + newClicked.team + " " + newClicked.name + " by " + clicked.team + " " + clicked.name + "\r\n";
@@ -1082,7 +1101,9 @@ namespace ChessCS
                     makeBoard();
                     buttonList[oldRow][oldColumn].Text = "";
 
+                    turn = turn == 0 ? 1 : 0;
                 }
+                //turn = turn == 0 ? 1 : 0;
             }
             checkForPromo();
         }
