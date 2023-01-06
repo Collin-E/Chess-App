@@ -529,6 +529,16 @@ namespace ChessCS
                     }
                     else
                     {
+                        if (team == "Black" && buttonList[row + increment][column].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row + increment);
+                            moves.Add(column);
+                        }
+                        else if (team == "White" && buttonList[row + increment][column].ForeColor == Color.Black)
+                        {
+                            moves.Add(row + increment);
+                            moves.Add(column);
+                        }
                         break;
                     }
                 }
@@ -543,6 +553,16 @@ namespace ChessCS
                     }
                     else
                     {
+                        if (team == "Black" && buttonList[row][column - increment].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row);
+                            moves.Add(column - increment);
+                        }
+                        else if (team == "White" && buttonList[row][column - increment].ForeColor == Color.Black)
+                        {
+                            moves.Add(row);
+                            moves.Add(column - increment);
+                        }
                         break;
                     }
                 }
@@ -557,6 +577,16 @@ namespace ChessCS
                     }
                     else
                     {
+                        if (team == "Black" && buttonList[row - increment][column].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row - increment);
+                            moves.Add(column);
+                        }
+                        else if (team == "White" && buttonList[row - increment][column].ForeColor == Color.Black)
+                        {
+                            moves.Add(row - increment);
+                            moves.Add(column);
+                        }
                         break;
                     }
                 }
@@ -571,6 +601,16 @@ namespace ChessCS
                     }
                     else
                     {
+                        if (team == "Black" && buttonList[row][column + increment].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row);
+                            moves.Add(column + increment);
+                        }
+                        else if (team == "White" && buttonList[row][column + increment].ForeColor == Color.Black)
+                        {
+                            moves.Add(row);
+                            moves.Add(column + increment);
+                        }
                         break;
                     }
                 }
@@ -586,6 +626,16 @@ namespace ChessCS
                     }
                     else
                     {
+                        if (team == "Black" && buttonList[row + increment][column + increment].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row + increment);
+                            moves.Add(column + increment);
+                        }
+                        else if (team == "White" && buttonList[row + increment][column + increment].ForeColor == Color.Black)
+                        {
+                            moves.Add(row + increment);
+                            moves.Add(column + increment);
+                        }
                         break;
                     }
                 }
@@ -601,6 +651,16 @@ namespace ChessCS
                     }
                     else
                     {
+                        if (team == "Black" && buttonList[row + increment][column - increment].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row + increment);
+                            moves.Add(column - increment);
+                        }
+                        else if (team == "White" && buttonList[row + increment][column - increment].ForeColor == Color.Black)
+                        {
+                            moves.Add(row + increment);
+                            moves.Add(column - increment);
+                        }
                         break;
                     }
                 }
@@ -616,6 +676,16 @@ namespace ChessCS
                     }
                     else
                     {
+                        if (team == "Black" && buttonList[row - increment][column + increment].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row - increment);
+                            moves.Add(column + increment);
+                        }
+                        else if (team == "White" && buttonList[row - increment][column + increment].ForeColor == Color.Black)
+                        {
+                            moves.Add(row - increment);
+                            moves.Add(column + increment);
+                        }
                         break;
                     }
                 }
@@ -631,6 +701,16 @@ namespace ChessCS
                     }
                     else
                     {
+                        if (team == "Black" && buttonList[row - increment][column - increment].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row - increment);
+                            moves.Add(column - increment);
+                        }
+                        else if (team == "White" && buttonList[row - increment][column - increment].ForeColor == Color.Black)
+                        {
+                            moves.Add(row - increment);
+                            moves.Add(column - increment);
+                        }
                         break;
                     }
                 }
