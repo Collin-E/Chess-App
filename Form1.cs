@@ -717,45 +717,173 @@ namespace ChessCS
             }
             else if(name == "King")
             {
-                if(row + 1 < 8 && buttonList[row+1][column].Text == "")
+                if(row + 1 < 8)
                 {
-                    moves.Add(row + 1);
-                    moves.Add(column);
+                    if (buttonList[row + 1][column].Text == "")
+                    {
+                        moves.Add(row + 1);
+                        moves.Add(column);
+                    }
+                    else
+                    {
+                        if (team == "Black" && buttonList[row + 1][column].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row + 1);
+                            moves.Add(column);
+                        }
+                        else if (team == "White" && buttonList[row + 1][column].ForeColor == Color.Black)
+                        {
+                            moves.Add(row + 1);
+                            moves.Add(column);
+                        }
+                    }
                 }
-                if (row + 1 < 8 && column + 1 < 8 && buttonList[row + 1][column+1].Text == "")
+                if (row + 1 < 8 && column + 1 < 8)
                 {
-                    moves.Add(row + 1);
-                    moves.Add(column+1);
+                    if (buttonList[row + 1][column + 1].Text == "")
+                    {
+                        moves.Add(row + 1);
+                        moves.Add(column + 1);
+                    }
+                    else
+                    {
+                        if (team == "Black" && buttonList[row + 1][column + 1].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row + 1);
+                            moves.Add(column + 1);
+                        }
+                        else if (team == "White" && buttonList[row + 1][column + 1].ForeColor == Color.Black)
+                        {
+                            moves.Add(row + 1);
+                            moves.Add(column + 1);
+                        }
+                    }
                 }
-                if (row + 1 < 8 && column - 1 >= 0 && buttonList[row + 1][column-1].Text == "")
+                if (row + 1 < 8 && column - 1 >= 0)
                 {
-                    moves.Add(row + 1);
-                    moves.Add(column-1);
+                    if (buttonList[row + 1][column - 1].Text == "")
+                    {
+                        moves.Add(row + 1);
+                        moves.Add(column - 1);
+                    }
+                    else
+                    {
+                        if (team == "Black" && buttonList[row + 1][column - 1].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row + 1);
+                            moves.Add(column - 1);
+                        }
+                        else if (team == "White" && buttonList[row + 1][column - 1].ForeColor == Color.Black)
+                        {
+                            moves.Add(row + 1);
+                            moves.Add(column - 1);
+                        }
+                    }
                 }
-                if (column+1 < 8 && buttonList[row][column+1].Text == "")
+                if (column+1 < 8)
                 {
-                    moves.Add(row);
-                    moves.Add(column+1);
+                    if (buttonList[row][column + 1].Text == "")
+                    {
+                        moves.Add(row);
+                        moves.Add(column + 1);
+                    }
+                    else
+                    {
+                        if (team == "Black" && buttonList[row][column + 1].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row);
+                            moves.Add(column + 1);
+                        }
+                        else if (team == "White" && buttonList[row][column + 1].ForeColor == Color.Black)
+                        {
+                            moves.Add(row);
+                            moves.Add(column + 1);
+                        }
+                    }
                 }
-                if (column-1 >= 0 && buttonList[row][column-1].Text == "")
+                if (column-1 >= 0)
                 {
-                    moves.Add(row);
-                    moves.Add(column-1);
+                    if (buttonList[row][column - 1].Text == "")
+                    {
+                        moves.Add(row);
+                        moves.Add(column - 1);
+                    }
+                    else
+                    {
+                        if (team == "Black" && buttonList[row][column - 1].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row);
+                            moves.Add(column - 1);
+                        }
+                        else if (team == "White" && buttonList[row][column - 1].ForeColor == Color.Black)
+                        {
+                            moves.Add(row);
+                            moves.Add(column - 1);
+                        }
+                    }
                 }
-                if (row - 1 >= 0 && buttonList[row -1][column].Text == "")
+                if (row - 1 >= 0)
                 {
-                    moves.Add(row - 1);
-                    moves.Add(column);
+                    if (buttonList[row - 1][column].Text == "")
+                    {
+                        moves.Add(row - 1);
+                        moves.Add(column);
+                    }
+                    else
+                    {
+                        if (team == "Black" && buttonList[row - 1][column].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row - 1);
+                            moves.Add(column);
+                        }
+                        else if (team == "White" && buttonList[row - 1][column].ForeColor == Color.Black)
+                        {
+                            moves.Add(row - 1);
+                            moves.Add(column);
+                        }
+                    }
                 }
-                if (row - 1 >= 0 && column + 1 < 8 && buttonList[row - 1][column + 1].Text == "")
+                if (row - 1 >= 0 && column + 1 < 8)
                 {
-                    moves.Add(row - 1);
-                    moves.Add(column + 1);
+                    if (buttonList[row - 1][column + 1].Text == "")
+                    {
+                        moves.Add(row - 1);
+                        moves.Add(column + 1);
+                    }
+                    else
+                    {
+                        if (team == "Black" && buttonList[row - 1][column + 1].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row - 1);
+                            moves.Add(column + 1);
+                        }
+                        else if (team == "White" && buttonList[row - 1][column + 1].ForeColor == Color.Black)
+                        {
+                            moves.Add(row - 1);
+                            moves.Add(column + 1);
+                        }
+                    }
                 }
-                if (row - 1 >= 0 && column - 1 >= 0 && buttonList[row - 1][column - 1].Text == "")
+                if (row - 1 >= 0 && column - 1 >= 0)
                 {
-                    moves.Add(row - 1);
-                    moves.Add(column - 1);
+                    if (buttonList[row - 1][column - 1].Text == "")
+                    {
+                        moves.Add(row - 1);
+                        moves.Add(column - 1);
+                    }
+                    else
+                    {
+                        if (team == "Black" && buttonList[row - 1][column - 1].ForeColor == Color.Gray)
+                        {
+                            moves.Add(row - 1);
+                            moves.Add(column - 1);
+                        }
+                        else if (team == "White" && buttonList[row - 1][column - 1].ForeColor == Color.Black)
+                        {
+                            moves.Add(row - 1);
+                            moves.Add(column - 1);
+                        }
+                    }
                 }
             }
             return moves;
@@ -883,6 +1011,8 @@ namespace ChessCS
             }
             else
             {
+                int savedRow2 = -1;
+                int savedColumn2 = -1;
                 //List<int> moves = findAvailableMoves(x);
                 if(clicked.team != "NoTeam" && saveI != -1)
                 {
@@ -893,22 +1023,41 @@ namespace ChessCS
                         if (row2 == row && column2 == column)
                         {
                             newClicked = combinedPieces[i];
-                            if(!newClicked.isAlive)
+                            if(newClicked.isAlive)
                             {
-                                newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
-                                break;
+                                // newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
+                                //break;
+                                saveNewClickedI = i;
+                                savedRow2 = row2;
+                                savedColumn2 = column2;
                             }
-                            saveNewClickedI = i;
+                            else
+                            {
+                                if(i == combinedPieces.Count()-1)
+                                {
+                                    newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
+                                    break;
+                                }
+                            }
+                           /* saveNewClickedI = i;
+                            savedRow2 = row2;
+                            savedColumn2 = column2;*/
                         }
                     }
-                    if(newClicked.name != "NoName" && saveNewClickedI != -1)
+                    if(newClicked.team != "NoTeam" && saveNewClickedI != -1)
                     {
-                        textBox1.Text += " Killed " + "\r\n";
+                        textBox1.Text += " Killed " + newClicked.team + " " + newClicked.name + " by " + clicked.team + " " + clicked.name + "\r\n";
                         combinedPieces[saveNewClickedI].kill();
+                        newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
+                        saveNewClickedI = -1;
+                        buttonList[savedRow2][savedColumn2].Text = "";
                     }
-
-                    newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
-                    saveNewClickedI = -1;
+                    else
+                    {
+                        textBox1.Text += "Didnt kill because " + newClicked.team + " and " + saveNewClickedI + "\r\n";
+                    }
+                    //newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
+                    //saveNewClickedI = -1;
 
 
                     textBox1.Text += "We get here" + "\r\n";
