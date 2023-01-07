@@ -21,7 +21,7 @@ namespace ChessCS
         chessPiece promotedPiece = new chessPiece("Temp", "NoTeam", -1, -1);
         int turn = 0; // 0 is white 1 is black
         //int saveI = -1;
-        //int saveNewClickedI = -1;
+        int saveNewClickedI = -1;
         bool whiteChecked = false;
         bool blackChecked = false;
         public Form1()
@@ -1530,7 +1530,7 @@ namespace ChessCS
                 int savedRow2 = -1;
                 int savedColumn2 = -1;
                 //List<int> moves = findAvailableMoves(x);
-                if(clicked.team != "NoTeam" && saveI != -1)
+                if(clicked.team != "NoTeam")
                 {
                     for (int i = 0; i < combinedPieces.Count(); i++)
                     {
@@ -1571,7 +1571,7 @@ namespace ChessCS
                     //     return;  
                     // }
 
-                    textBox1.Text += "Moved " + combinedPieces[saveI].name + " of team " + combinedPieces[saveI].team + " to " + row + " " + column + "\r\n";
+                    textBox1.Text += "Moved " + clicked.name + " of team " + clicked.team + " to " + row + " " + column + "\r\n";
                     textBox1.Text += "Clicked = " + clicked.name + clicked.team + clicked.row + " " + clicked.column + "\r\n";
                     textBox1.Text += "newClicked = " + newClicked.name + newClicked.team + newClicked.row + " " + newClicked.column + "\r\n";
 
@@ -1593,15 +1593,21 @@ namespace ChessCS
 
                     //textBox1.Text += "We get here" + "\r\n";
                     //combinedPieces[saveI].row += (combinedPieces[saveI].row - row);
-                    int oldRow = combinedPieces[saveI].row;
-                    int oldColumn = combinedPieces[saveI].column;
-                    combinedPieces[saveI].row = row;
-                    combinedPieces[saveI].column = column;
+
+                    //int oldRow = combinedPieces[saveI].row;
+                    //int oldColumn = combinedPieces[saveI].column;
+                    // combinedPieces[saveI].row = row;
+                    // combinedPieces[saveI].column = column;
+                    int oldRow = clicked.row;
+                    int oldColumn = clicked.column;
+                    clicked.row = row;
+                    clicked.column = column;
+
                     /*textBox1.Text += "Moved " + combinedPieces[saveI].name + " of team " + combinedPieces[saveI].team + " to " + row + " " + column + "\r\n";  hi
                     textBox1.Text += "Clicked = " + clicked.name + clicked.team + clicked.row + " " + clicked.column + "\r\n";
                     textBox1.Text += "newClicked = " + newClicked.name + newClicked.team + newClicked.row + " " + newClicked.column + "\r\n";                    hi */
                     //combinedPieces[saveI].kill();
-                    saveI = -1;
+                    //saveI = -1;
                     
                     clicked = new chessPiece("Temp", "NoTeam", -1, -1);
 
