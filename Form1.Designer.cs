@@ -1131,7 +1131,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(210, 520);
+            this.textBox1.Size = new System.Drawing.Size(570, 520);
             this.textBox1.TabIndex = 64;
             // 
             // queenPromo
@@ -1228,7 +1228,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1093, 625);
+            this.ClientSize = new System.Drawing.Size(1340, 625);
             this.Controls.Add(this.whiteTurnLabel);
             this.Controls.Add(this.blackTurnLabel);
             this.Controls.Add(this.bishopPromo);

@@ -22,6 +22,8 @@ namespace ChessCS
         int turn = 0; // 0 is white 1 is black
         int saveI = -1;
         int saveNewClickedI = -1;
+        bool whiteChecked = false;
+        bool blackChecked = false;
         public Form1()
         {
             InitializeComponent();
@@ -93,6 +95,32 @@ namespace ChessCS
                         buttonList[row][column].ForeColor = Color.Black;
                     }
                     
+                }
+            }
+            resetButtons();
+        }
+        private void resetButtons()
+        {
+            for(int i = 0; i < buttonList.Count(); i++)
+            {
+                for(int j = 0; j < buttonList[i].Count(); j++)
+                {
+                    if(buttonList[i][j].Text != "")
+                    {
+                        bool isThereARealPieceHere = false;
+                        for(int k = 0; k < combinedPieces.Count(); k++)
+                        {
+                            chessPiece temp = combinedPieces[k];
+                            if(temp.row == i && temp.column == j)
+                            {
+                                isThereARealPieceHere = true;
+                            }
+                        }
+                        if(!isThereARealPieceHere)
+                        {
+                            buttonList[i][j].Text = "";
+                        }
+                    }
                 }
             }
         }
@@ -738,6 +766,7 @@ namespace ChessCS
             }
             else if(name == "King")
             {
+               // int y = checkCheck();
                 if(row + 1 < 8)
                 {
                     if (buttonList[row + 1][column].Text == "")
@@ -1000,7 +1029,7 @@ namespace ChessCS
             if (buttonList[row][column].BackColor != Color.DodgerBlue)
             {
                 resetBoardColors();
-                textBox1.Text += row + " blue " + column + "\r\n";
+               // textBox1.Text += row + " blue " + column + "\r\n";
                 chessPiece x = new chessPiece("Temp", "NoTeam", -1, -1);
                 for (int i = 0; i < combinedPieces.Count(); i++)
                 {
@@ -1085,7 +1114,7 @@ namespace ChessCS
 
                     if(newClicked.team != "NoTeam" && saveNewClickedI != -1)
                     {
-                        textBox1.Text += " Killed " + newClicked.team + " " + newClicked.name + " by " + clicked.team + " " + clicked.name + "\r\n";
+                        //textBox1.Text += " Killed " + newClicked.team + " " + newClicked.name + " by " + clicked.team + " " + clicked.name + "\r\n";
                         combinedPieces[saveNewClickedI].kill();
                         newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
                         saveNewClickedI = -1;
@@ -1093,13 +1122,13 @@ namespace ChessCS
                     }
                     else
                     {
-                        textBox1.Text += "Didnt kill because " + newClicked.team + " and " + saveNewClickedI + "\r\n";
+                       // textBox1.Text += "Didnt kill because " + newClicked.team + " and " + saveNewClickedI + "\r\n";
                     }
                     //newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
                     //saveNewClickedI = -1;
 
 
-                    textBox1.Text += "We get here" + "\r\n";
+                    //textBox1.Text += "We get here" + "\r\n";
                     //combinedPieces[saveI].row += (combinedPieces[saveI].row - row);
                     int oldRow = combinedPieces[saveI].row;
                     int oldColumn = combinedPieces[saveI].column;
@@ -1117,6 +1146,20 @@ namespace ChessCS
                     turn = turn == 0 ? 1 : 0;
                     makeBoard();
                     buttonList[oldRow][oldColumn].Text = "";
+                  /*  int y = checkCheck();
+                    if (y == 0)
+                    {
+                        whiteChecked = true;
+                    }
+                    else if (y == 1)
+                    {
+                        blackChecked = true;
+                    }
+                    else if (y == -1)
+                    {
+                        whiteChecked = false;
+                        blackChecked = false;
+                    }*/
                 }
                 //turn = turn == 0 ? 1 : 0;
             }
@@ -1172,6 +1215,124 @@ namespace ChessCS
             rookPromo.Enabled = false;
             knightPromo.Enabled = false;
             bishopPromo.Enabled = false;
+        }
+        private int checkCheck()
+        {
+            chessPiece whiteK = new chessPiece("Temp", "NoTeam", -1, -1);
+            chessPiece blackK = new chessPiece("Temp", "NoTeam", -1, -1);
+            for (int i = 0; i < combinedPieces.Count; i++)
+            {
+                if (combinedPieces[i].name == "King" && combinedPieces[i].team == "White")
+                {
+                    whiteK = combinedPieces[i];
+                }
+                else if(combinedPieces[i].name == "King" && combinedPieces[i].team == "Black")
+                {
+                    blackK = combinedPieces[i];
+                }
+            }
+            textBox1.Text += "White king is at " + whiteK.row + " " + whiteK.column + "\r\n";
+            textBox1.Text += "Black king is at " + blackK.row + " " + blackK.column + "\r\n";
+            int saveIWhite = -1;
+            int saveJWhite = -1;
+            int saveIBlack = -1;
+            int saveJBlack = -1;
+            for(int i = 0; i < buttonList.Count; i++)
+            {
+                for(int j = 0; j < buttonList[i].Count; j++)
+                {
+                    if(i == whiteK.row && j == whiteK.column)
+                    {
+                        saveIWhite = i;
+                        saveJWhite = j;
+                    }
+                    if(i == blackK.row && j == blackK.column)
+                    {
+                        saveIBlack = i;
+                        saveJBlack = j;
+                    }
+                }
+            }
+            textBox1.Text += "White king is at button " + saveIWhite + " " + saveJWhite + "\r\n";
+            textBox1.Text += "Black king is at button " + saveIBlack + " " + saveJBlack + "\r\n";
+            for (int j = 0; j < combinedPieces.Count; j++)
+            {
+                if (combinedPieces[j].name != "King")
+                {
+
+
+                    List<int> moves = findAvailableMoves(combinedPieces[j]);
+                    for (int i = 0; i < moves.Count(); i += 2)
+                    {
+                        int newRow = moves[i];
+                        int newColumn = moves[i + 1];
+                        buttonList[newRow][newColumn].BackColor = Color.DodgerBlue;
+                    }
+                    if (saveIWhite != -1 && saveJWhite != -1 && buttonList[saveIWhite][saveJWhite].BackColor == Color.DodgerBlue)
+                    {
+                        textBox1.Text += " White King is in check from " + combinedPieces[j] + " \r\n";
+                        resetBoardColors();
+                        return 0;
+                    }
+                    else if (saveIBlack != -1 && saveJBlack != -1 && buttonList[saveIBlack][saveJBlack].BackColor == Color.DodgerBlue)
+                    {
+                        textBox1.Text += " Black King is in check from " + combinedPieces[j] + " \r\n";
+                        resetBoardColors();
+                        return 1;
+                    }
+                    resetBoardColors();
+                }
+            }
+            return -1;
+        }
+        private bool stageChange(string name1, string team1, int row1, int column1, string name2, string team2, int row2, int column2)
+        {
+            chessPiece tempPiece = new chessPiece(name2, team2, row2, column2);
+            chessPiece oldPiece = new chessPiece(name1, team1, row1, column1);
+            int saveThisI = -1;
+            for(int i = 0; i < combinedPieces.Count(); i++)
+            {
+                if(combinedPieces[i].name == oldPiece.name && combinedPieces[i].team == oldPiece.team && combinedPieces[i].row == oldPiece.row && combinedPieces[i].column == oldPiece.column)
+                {
+                    oldPiece = combinedPieces[i];
+                    saveThisI = i;
+                }
+            }
+            textBox1.Text += "Removing piece " + oldPiece.name + " " + oldPiece.team + " " + oldPiece.row + " " + oldPiece.column + " \r\n";
+            combinedPieces.RemoveAt(saveThisI);
+            //combinedPieces[saveThisI].kill();
+            /*for(int i = 0; i < combinedPieces.Count(); i++)
+            {
+                textBox1.Text += combinedPieces[i].name + " " + combinedPieces[i].team + " ";
+            }
+            textBox1.Text += "\r\n\r\n";*/
+            combinedPieces.Add(tempPiece);
+            makeBoard();
+            int y = checkCheck();
+            bool temp = true;
+
+            if(team1 == "White" && y == 0)
+            {
+                temp = false;
+            }
+            else if(team1 == "White" && y == -1)
+            {
+                temp = true;
+            }
+            else if(team1 == "Black" && y == 1)
+            {
+                temp = false;
+            }
+            else if(team1 == "Black" && y == -1)
+            {
+                temp = true;
+            }
+
+            combinedPieces.RemoveAt(combinedPieces.Count()-1);
+            combinedPieces.Add(oldPiece);
+            makeBoard();
+
+            return temp;
         }
     }
 }
