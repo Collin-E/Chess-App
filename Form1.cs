@@ -20,8 +20,8 @@ namespace ChessCS
         chessPiece newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
         chessPiece promotedPiece = new chessPiece("Temp", "NoTeam", -1, -1);
         int turn = 0; // 0 is white 1 is black
-        int saveI = -1;
-        int saveNewClickedI = -1;
+        //int saveI = -1;
+        //int saveNewClickedI = -1;
         bool whiteChecked = false;
         bool blackChecked = false;
         public Form1()
@@ -781,19 +781,13 @@ namespace ChessCS
                         textBox1.Text += "y = " + y + "\r\n";
                         if(y == 0 && newKing.team == "White")
                         {
-                            //combinedPieces.Remove(newKing);
-                            //combinedPieces.Add(here);
                             moves.Remove(row + 1);
                             moves.Remove(column);
-                            //makeBoard();
                         }
                         else if (y == 1 && newKing.team == "Black")
                         {
-                            //combinedPieces.Remove(newKing);
-                           // combinedPieces.Add(here);
                             moves.Remove(row + 1);
                             moves.Remove(column);
-                            //makeBoard();
                         }
                         combinedPieces.Remove(newKing);
                         combinedPieces.Add(here);
@@ -805,13 +799,53 @@ namespace ChessCS
                         {
                             moves.Add(row + 1);
                             moves.Add(column);
+                            chessPiece newKing = new chessPiece("King", team, row + 1, column);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
+
                         }
                         else if (team == "White" && buttonList[row + 1][column].ForeColor == Color.Black)
                         {
                             moves.Add(row + 1);
                             moves.Add(column);
+                            chessPiece newKing = new chessPiece("King", team, row + 1, column);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                     }
+
                 }
                 if (row + 1 < 8 && column + 1 < 8)
                 {
@@ -819,6 +853,25 @@ namespace ChessCS
                     {
                         moves.Add(row + 1);
                         moves.Add(column + 1);
+                        chessPiece newKing = new chessPiece("King", team, row + 1, column+1);
+                        combinedPieces.Remove(here);
+                        combinedPieces.Add(newKing);
+                        makeBoard();
+                        int y = checkCheck();
+                        textBox1.Text += "y = " + y + "\r\n";
+                        if (y == 0 && newKing.team == "White")
+                        {
+                            moves.Remove(row + 1);
+                            moves.Remove(column+1);
+                        }
+                        else if (y == 1 && newKing.team == "Black")
+                        {
+                            moves.Remove(row + 1);
+                            moves.Remove(column+1);
+                        }
+                        combinedPieces.Remove(newKing);
+                        combinedPieces.Add(here);
+                        makeBoard();
                     }
                     else
                     {
@@ -826,11 +879,49 @@ namespace ChessCS
                         {
                             moves.Add(row + 1);
                             moves.Add(column + 1);
+                            chessPiece newKing = new chessPiece("King", team, row + 1, column + 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column + 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column + 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                         else if (team == "White" && buttonList[row + 1][column + 1].ForeColor == Color.Black)
                         {
                             moves.Add(row + 1);
                             moves.Add(column + 1);
+                            chessPiece newKing = new chessPiece("King", team, row + 1, column + 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column + 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column + 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                     }
                 }
@@ -840,6 +931,25 @@ namespace ChessCS
                     {
                         moves.Add(row + 1);
                         moves.Add(column - 1);
+                        chessPiece newKing = new chessPiece("King", team, row + 1, column - 1);
+                        combinedPieces.Remove(here);
+                        combinedPieces.Add(newKing);
+                        makeBoard();
+                        int y = checkCheck();
+                        textBox1.Text += "y = " + y + "\r\n";
+                        if (y == 0 && newKing.team == "White")
+                        {
+                            moves.Remove(row + 1);
+                            moves.Remove(column - 1);
+                        }
+                        else if (y == 1 && newKing.team == "Black")
+                        {
+                            moves.Remove(row + 1);
+                            moves.Remove(column - 1);
+                        }
+                        combinedPieces.Remove(newKing);
+                        combinedPieces.Add(here);
+                        makeBoard();
                     }
                     else
                     {
@@ -847,11 +957,49 @@ namespace ChessCS
                         {
                             moves.Add(row + 1);
                             moves.Add(column - 1);
+                            chessPiece newKing = new chessPiece("King", team, row + 1, column - 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column - 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column - 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                         else if (team == "White" && buttonList[row + 1][column - 1].ForeColor == Color.Black)
                         {
                             moves.Add(row + 1);
                             moves.Add(column - 1);
+                            chessPiece newKing = new chessPiece("King", team, row + 1, column - 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column - 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row + 1);
+                                moves.Remove(column - 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                     }
                 }
@@ -861,6 +1009,25 @@ namespace ChessCS
                     {
                         moves.Add(row);
                         moves.Add(column + 1);
+                        chessPiece newKing = new chessPiece("King", team, row, column + 1);
+                        combinedPieces.Remove(here);
+                        combinedPieces.Add(newKing);
+                        makeBoard();
+                        int y = checkCheck();
+                        textBox1.Text += "y = " + y + "\r\n";
+                        if (y == 0 && newKing.team == "White")
+                        {
+                            moves.Remove(row);
+                            moves.Remove(column + 1);
+                        }
+                        else if (y == 1 && newKing.team == "Black")
+                        {
+                            moves.Remove(row);
+                            moves.Remove(column + 1);
+                        }
+                        combinedPieces.Remove(newKing);
+                        combinedPieces.Add(here);
+                        makeBoard();
                     }
                     else
                     {
@@ -868,11 +1035,49 @@ namespace ChessCS
                         {
                             moves.Add(row);
                             moves.Add(column + 1);
+                            chessPiece newKing = new chessPiece("King", team, row, column + 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row);
+                                moves.Remove(column + 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row);
+                                moves.Remove(column + 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                         else if (team == "White" && buttonList[row][column + 1].ForeColor == Color.Black)
                         {
                             moves.Add(row);
                             moves.Add(column + 1);
+                            chessPiece newKing = new chessPiece("King", team, row, column + 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row);
+                                moves.Remove(column + 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row);
+                                moves.Remove(column + 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                     }
                 }
@@ -882,6 +1087,25 @@ namespace ChessCS
                     {
                         moves.Add(row);
                         moves.Add(column - 1);
+                        chessPiece newKing = new chessPiece("King", team, row, column - 1);
+                        combinedPieces.Remove(here);
+                        combinedPieces.Add(newKing);
+                        makeBoard();
+                        int y = checkCheck();
+                        textBox1.Text += "y = " + y + "\r\n";
+                        if (y == 0 && newKing.team == "White")
+                        {
+                            moves.Remove(row);
+                            moves.Remove(column - 1);
+                        }
+                        else if (y == 1 && newKing.team == "Black")
+                        {
+                            moves.Remove(row);
+                            moves.Remove(column - 1);
+                        }
+                        combinedPieces.Remove(newKing);
+                        combinedPieces.Add(here);
+                        makeBoard();
                     }
                     else
                     {
@@ -889,11 +1113,49 @@ namespace ChessCS
                         {
                             moves.Add(row);
                             moves.Add(column - 1);
+                            chessPiece newKing = new chessPiece("King", team, row, column - 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row);
+                                moves.Remove(column - 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row);
+                                moves.Remove(column - 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                         else if (team == "White" && buttonList[row][column - 1].ForeColor == Color.Black)
                         {
                             moves.Add(row);
                             moves.Add(column - 1);
+                            chessPiece newKing = new chessPiece("King", team, row, column - 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row);
+                                moves.Remove(column - 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row);
+                                moves.Remove(column - 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                     }
                 }
@@ -903,6 +1165,25 @@ namespace ChessCS
                     {
                         moves.Add(row - 1);
                         moves.Add(column);
+                        chessPiece newKing = new chessPiece("King", team, row-1, column);
+                        combinedPieces.Remove(here);
+                        combinedPieces.Add(newKing);
+                        makeBoard();
+                        int y = checkCheck();
+                        textBox1.Text += "y = " + y + "\r\n";
+                        if (y == 0 && newKing.team == "White")
+                        {
+                            moves.Remove(row-1);
+                            moves.Remove(column);
+                        }
+                        else if (y == 1 && newKing.team == "Black")
+                        {
+                            moves.Remove(row-1);
+                            moves.Remove(column);
+                        }
+                        combinedPieces.Remove(newKing);
+                        combinedPieces.Add(here);
+                        makeBoard();
                     }
                     else
                     {
@@ -910,11 +1191,49 @@ namespace ChessCS
                         {
                             moves.Add(row - 1);
                             moves.Add(column);
+                            chessPiece newKing = new chessPiece("King", team, row - 1, column);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                         else if (team == "White" && buttonList[row - 1][column].ForeColor == Color.Black)
                         {
                             moves.Add(row - 1);
                             moves.Add(column);
+                            chessPiece newKing = new chessPiece("King", team, row - 1, column);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                     }
                 }
@@ -924,6 +1243,25 @@ namespace ChessCS
                     {
                         moves.Add(row - 1);
                         moves.Add(column + 1);
+                        chessPiece newKing = new chessPiece("King", team, row - 1, column+1);
+                        combinedPieces.Remove(here);
+                        combinedPieces.Add(newKing);
+                        makeBoard();
+                        int y = checkCheck();
+                        textBox1.Text += "y = " + y + "\r\n";
+                        if (y == 0 && newKing.team == "White")
+                        {
+                            moves.Remove(row - 1);
+                            moves.Remove(column+1);
+                        }
+                        else if (y == 1 && newKing.team == "Black")
+                        {
+                            moves.Remove(row - 1);
+                            moves.Remove(column+1);
+                        }
+                        combinedPieces.Remove(newKing);
+                        combinedPieces.Add(here);
+                        makeBoard();
                     }
                     else
                     {
@@ -931,11 +1269,49 @@ namespace ChessCS
                         {
                             moves.Add(row - 1);
                             moves.Add(column + 1);
+                            chessPiece newKing = new chessPiece("King", team, row - 1, column + 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column + 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column + 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                         else if (team == "White" && buttonList[row - 1][column + 1].ForeColor == Color.Black)
                         {
                             moves.Add(row - 1);
                             moves.Add(column + 1);
+                            chessPiece newKing = new chessPiece("King", team, row - 1, column + 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column + 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column + 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                     }
                 }
@@ -945,6 +1321,25 @@ namespace ChessCS
                     {
                         moves.Add(row - 1);
                         moves.Add(column - 1);
+                        chessPiece newKing = new chessPiece("King", team, row - 1, column - 1);
+                        combinedPieces.Remove(here);
+                        combinedPieces.Add(newKing);
+                        makeBoard();
+                        int y = checkCheck();
+                        textBox1.Text += "y = " + y + "\r\n";
+                        if (y == 0 && newKing.team == "White")
+                        {
+                            moves.Remove(row - 1);
+                            moves.Remove(column - 1);
+                        }
+                        else if (y == 1 && newKing.team == "Black")
+                        {
+                            moves.Remove(row - 1);
+                            moves.Remove(column - 1);
+                        }
+                        combinedPieces.Remove(newKing);
+                        combinedPieces.Add(here);
+                        makeBoard();
                     }
                     else
                     {
@@ -952,11 +1347,49 @@ namespace ChessCS
                         {
                             moves.Add(row - 1);
                             moves.Add(column - 1);
+                            chessPiece newKing = new chessPiece("King", team, row - 1, column - 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column - 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column - 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                         else if (team == "White" && buttonList[row - 1][column - 1].ForeColor == Color.Black)
                         {
                             moves.Add(row - 1);
                             moves.Add(column - 1);
+                            chessPiece newKing = new chessPiece("King", team, row - 1, column - 1);
+                            combinedPieces.Remove(here);
+                            combinedPieces.Add(newKing);
+                            makeBoard();
+                            int y = checkCheck();
+                            textBox1.Text += "y = " + y + "\r\n";
+                            if (y == 0 && newKing.team == "White")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column - 1);
+                            }
+                            else if (y == 1 && newKing.team == "Black")
+                            {
+                                moves.Remove(row - 1);
+                                moves.Remove(column - 1);
+                            }
+                            combinedPieces.Remove(newKing);
+                            combinedPieces.Add(here);
+                            makeBoard();
                         }
                     }
                 }
@@ -1065,7 +1498,7 @@ namespace ChessCS
                         if (combinedPieces[i].isAlive)
                         {
                             x = combinedPieces[i];
-                            saveI = i;
+                           // saveI = i;
                         }
                     }
                 }
@@ -1105,11 +1538,12 @@ namespace ChessCS
                         int column2 = combinedPieces[i].column;
                         if (row2 == row && column2 == column)
                         {
-                            newClicked = combinedPieces[i];
-                            if(newClicked.isAlive)
+                            //newClicked = combinedPieces[i];
+                            if(combinedPieces[i].isAlive)
                             {
                                 // newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
                                 //break;
+                                newClicked = combinedPieces[i];
                                 saveNewClickedI = i;
                                 savedRow2 = row2;
                                 savedColumn2 = column2;
@@ -1133,13 +1567,17 @@ namespace ChessCS
                     //    return; 
                     //}
                     //else if(clicked.team == "Black" && turn != 1) {
-                   //     textBox1.Text += "It is not your turn: " + turn + "\r\n";
-                   //     return;  
-                   // }
+                    //     textBox1.Text += "It is not your turn: " + turn + "\r\n";
+                    //     return;  
+                    // }
 
-                    if(newClicked.team != "NoTeam" && saveNewClickedI != -1)
+                    textBox1.Text += "Moved " + combinedPieces[saveI].name + " of team " + combinedPieces[saveI].team + " to " + row + " " + column + "\r\n";
+                    textBox1.Text += "Clicked = " + clicked.name + clicked.team + clicked.row + " " + clicked.column + "\r\n";
+                    textBox1.Text += "newClicked = " + newClicked.name + newClicked.team + newClicked.row + " " + newClicked.column + "\r\n";
+
+                    if (newClicked.team != "NoTeam" && saveNewClickedI != -1)
                     {
-                        //textBox1.Text += " Killed " + newClicked.team + " " + newClicked.name + " by " + clicked.team + " " + clicked.name + "\r\n";
+                        textBox1.Text += " Killed " + newClicked.team + " " + newClicked.name + " by " + clicked.team + " " + clicked.name + "\r\n";
                         combinedPieces[saveNewClickedI].kill();
                         newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
                         saveNewClickedI = -1;
@@ -1147,7 +1585,7 @@ namespace ChessCS
                     }
                     else
                     {
-                       // textBox1.Text += "Didnt kill because " + newClicked.team + " and " + saveNewClickedI + "\r\n";
+                       textBox1.Text += "Didnt kill because " + newClicked.team + " and " + saveNewClickedI + "\r\n";
                     }
                     //newClicked = new chessPiece("Temp", "NoTeam", -1, -1);
                     //saveNewClickedI = -1;
@@ -1159,6 +1597,9 @@ namespace ChessCS
                     int oldColumn = combinedPieces[saveI].column;
                     combinedPieces[saveI].row = row;
                     combinedPieces[saveI].column = column;
+                    /*textBox1.Text += "Moved " + combinedPieces[saveI].name + " of team " + combinedPieces[saveI].team + " to " + row + " " + column + "\r\n";  hi
+                    textBox1.Text += "Clicked = " + clicked.name + clicked.team + clicked.row + " " + clicked.column + "\r\n";
+                    textBox1.Text += "newClicked = " + newClicked.name + newClicked.team + newClicked.row + " " + newClicked.column + "\r\n";                    hi */
                     //combinedPieces[saveI].kill();
                     saveI = -1;
                     
@@ -1278,8 +1719,8 @@ namespace ChessCS
                     }
                 }
             }
-            textBox1.Text += "White king is at button " + saveIWhite + " " + saveJWhite + "\r\n";
-            textBox1.Text += "Black king is at button " + saveIBlack + " " + saveJBlack + "\r\n";
+            //textBox1.Text += "White king is at button " + saveIWhite + " " + saveJWhite + "\r\n";
+            //textBox1.Text += "Black king is at button " + saveIBlack + " " + saveJBlack + "\r\n";
             for (int j = 0; j < combinedPieces.Count; j++)
             {
                 if (combinedPieces[j].name != "King")
