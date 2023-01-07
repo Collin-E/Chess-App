@@ -773,6 +773,31 @@ namespace ChessCS
                     {
                         moves.Add(row + 1);
                         moves.Add(column);
+                        chessPiece newKing = new chessPiece("King", team, row + 1, column);
+                        combinedPieces.Remove(here);
+                        combinedPieces.Add(newKing);
+                        makeBoard();
+                        int y = checkCheck();
+                        textBox1.Text += "y = " + y + "\r\n";
+                        if(y == 0 && newKing.team == "White")
+                        {
+                            //combinedPieces.Remove(newKing);
+                            //combinedPieces.Add(here);
+                            moves.Remove(row + 1);
+                            moves.Remove(column);
+                            //makeBoard();
+                        }
+                        else if (y == 1 && newKing.team == "Black")
+                        {
+                            //combinedPieces.Remove(newKing);
+                           // combinedPieces.Add(here);
+                            moves.Remove(row + 1);
+                            moves.Remove(column);
+                            //makeBoard();
+                        }
+                        combinedPieces.Remove(newKing);
+                        combinedPieces.Add(here);
+                        makeBoard();
                     }
                     else
                     {
